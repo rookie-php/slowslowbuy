@@ -1,0 +1,60 @@
+  /*公共详情部分*/
+  #public-detail {
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    // 商品路径
+    >.pd-nav {
+        height: 2rem;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        line-height: 2rem;
+        padding-left: 0.75rem;
+        font-size: 0.7rem;
+        background:linear-gradient(#fff,#ebebeb);
+    }
+    // 商品内容
+    .pd-body {
+        //上半部分 图片
+        >.pic {
+            text-align: center;
+            position: relative;
+            >a {
+                display: inline-block;
+                &:last-of-type {
+                    position: absolute;
+                    right: 0.75rem;
+                    top: 0.75rem;
+                    >img {
+                        width: 1.95rem;
+                        height: 1.95rem;
+                    }
+                }
+            }
+        }
+        //下半部分 标题 价格 评论
+        >.info {
+            >h4 {
+                padding-left: 0.5rem;
+                margin-top: 1rem;
+            }
+            >ul {
+                margin: 1rem 0px;
+                >li {
+                    width: 50%;
+                    float: left;
+                    padding-left: 0.5rem;
+                    &.comment {
+                        >a {
+                            display: inline-block;
+                            >span {
+                                &:first-of-type {
+                                    color: #a1a1a1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

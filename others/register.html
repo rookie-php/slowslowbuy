@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入bootstrap样式文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入自己写的less文件 -->
+    <link rel="stylesheet/less" href="../less/register.less">
+    <!-- 引入less编译文件 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 顶部通栏 -->
+    <header id="topbar">
+        <!-- 头部 -->
+        <div class="header1 clearfix">
+            <!-- LOGO图标 -->
+            <div class="pull-left logo">
+                <a href="http://m.manmanbuy.com/" title="慢慢买比价网--手机版">
+                    <img src="../images/header_logo.png" alt="慢慢买比价网--手机版">
+                </a>
+            </div>
+            <!-- APP下载 -->
+            <div class="pull-right appDown">
+                <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" title="手机app下载">
+                    <img src="../images/header_app.png" alt="手机app下载">
+                </a>
+            </div>
+            <!-- 搜索框 -->
+        </div>
+        <!-- 搜索框 -->
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="请输入你要搜索的商品">
+                <input type="submit" value="搜索">
+            </form>
+        </div>
+    </header>
+
+    <!--注册 -->
+    <section id="form">
+        <form class="form-inline">
+            <div class="form-group col-xs-12">
+                <label class="sr-only" for="exampleInputEmail3">用户名</label>
+                <input type="email" class="form-control" placeholder="请输入用户名">
+            </div>
+            <div class="form-group col-xs-12">
+                <label class="sr-only" for="exampleInputPassword3">密码</label>
+                <input type="password" class="form-control" id="exampleInputPassword3" placeholder="密码">
+            </div>
+            <div class="form-group col-xs-12">
+                <label class="sr-only" for="exampleInputPassword3">密码</label>
+                <input type="password" class="form-control" placeholder="密码(6-20个字符)">
+            </div>
+            <div class="form-group col-xs-12">
+                <label class="sr-only" for="exampleInputPassword3">密码</label>
+                <input type="password" class="form-control" placeholder="请输入手机号">
+            </div>
+            <div class="form-group col-xs-12">
+                <div type="password" class="form-control col-xs-1 btn btn-default randNum">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <input type="password" class="form-control col-xs-1">
+                <button type="submit" class="btn btn-warning col-xs-4">获取手机验证码</button>
+            </div>
+            <div class="form-group col-xs-12">
+                <label class="sr-only" for="exampleInputPassword3">密码</label>
+                <input type="password" class="form-control" placeholder="请输入邮箱">
+            </div>
+            <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-warning col-xs-12">注册</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="row">
+                <a href="../others/login.html" class="login col-xs-4">登录</a>
+                <a href="../others/register.html" class="register  col-xs-4">注册</a>
+                <a href="javascript:;" class="backTop  col-xs-4">返回到顶部</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                <a href="../index.html">慢慢买手机版--掌上比价平台</a>
+            </p>
+            <a href="../index.html">m.manmanbuy.com</a>
+        </div>
+    </footer>
+    <!-- 引入JQuery -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <!-- 引入bootstrap.js文件 -->
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入自己写的JS文件 -->
+    <script src="../js/base.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

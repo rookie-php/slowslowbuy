@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入less -->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <link rel="stylesheet" href="./css/fonts.css">    
+    <!-- 引入less编译器 -->
+    <script src="./lib/less/less.js"></script>   
+     <!--引入jquery  -->
+     <script src="./lib/jQuery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <!-- 公用头部 -->
+    <header id="topbar">
+        <!-- logo部分 -->
+        <div class="topbar-img clearfix">
+            <!-- 左边的Logo -->
+            <a href="/index.html" class="l-logo">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+            <!-- 右边的下载图标 -->
+            <a href="#" class="r-appDown">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+        <!-- 搜索部分 -->
+        <div class="topbar-search">
+            <!-- 表单 -->
+            <form action="" class="topbar-form">
+                <!-- 搜索框 -->
+                <input type="text" class="search-txt" placeholder="请输入你想比价的商品">
+                <!-- 搜索按钮 -->
+                <input type="submit" value="搜索" class="search-btn">
+            </form>
+        </div>
+    </header>
+    
+    <!-- 导航部分 -->
+    <nav id="nav">
+       
+    </nav>
+
+    <!-- 超值折扣推荐 -->
+    <section id="discount-goods">
+        <!-- 超值折扣标题 -->
+        <div class="discount-title clearfix">
+            <h4 class="discount-head">超值折扣推荐</h4>
+            <a href="#" class="discount-img">
+                <img src="./images/more.png" alt="">
+            </a>
+        </div>
+        <!-- 超值折扣商品 -->
+        <div class="discount-body">
+            <!-- 每个商品列表 -->
+            <div class="item">
+                <a href="#" class="clearfix">
+                    <!-- 左边商品图片部分 -->
+                    <div class="item-left">
+                            <img src="./images/ic_temai.png" alt="">
+                    </div>
+                    <!-- 右边商品介绍部分 -->
+                    <div class="item-right">
+                        <!-- 商品标题 -->
+                        <div class="title">
+                            11.4 京东服饰神券 全品类优惠券 免运费券 优惠领券汇总
+                            <span>服饰满300元五折</span>
+                        </div>
+                        <!-- 信息部分 包括商家 时间 评论数 -->
+                        <div class="info clearfix">
+                            <span href="#">慢慢买 | 11-04 08:37</span>
+                            <span>
+                                <i class="icon-comment"></i>
+                                1
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 更多优惠信息 -->
+        <div class="discount-footer">
+            <a href="#">更多优惠信息 »</a>
+        </div>
+    </section>
+
+    <!-- 品牌排行 -->
+    <section id="brand-charts" class="clearfix">
+            <h4>品牌排行</h4>
+            <img src="./images/more.png" alt="">
+    </section>
+
+    <!-- 公用底部 -->
+    <footer id="footer">
+        <!-- 登录 注册 返回顶部按钮 -->
+        <div class="footer-top clearfix">
+            <!-- 登录按钮 -->
+            <a href="#" class="login">登录</a>
+            <!-- 注册按钮 -->
+            <a href="#" class="register">注册</a>
+            <!-- 返回顶部 -->
+            <a href="#" class="backTop">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </a>
+        </div>
+        <!-- 网页基本信息 -->
+        <div class="footer-info">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 固定部分 -->
+    <div id="fixed">
+        <a href="#" class="downLoad-img">
+            <img src="./images/appDownload.png" alt="">
+        </a>
+        <a href="#topbar" class="backTop"></a>
+    </div>
+
+    <!-- 导航模块 默认显示部分 -->
+    <script type="text/html" id="Tmp-nav">
+        <ul class="nav-ul clearfix">
+            {{each result as value i}}
+            {{if i>=0 && i<8}}
+            <li>
+                <a href="/others/{{value.titlehref}}">
+                    {{#value.img}}
+                    <p>{{value.name}}</p>
+                </a>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </script>
+    <!-- 导航模块 默认隐藏部分 -->
+    <script type="text/html" id="Tmp-nav-hide">
+        <ul class="nav-ul-hide clearfix">
+            {{each result as value i}}
+            {{if i>=8 && i<12}}
+            <li>
+                <a href="/others/{{value.titlehref}}">
+                    {{#value.img}}
+                    <p>{{value.name}}</p>
+                </a>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </script>
+
+    <!-- 超值折扣模块 -->
+    <script type="text/html" id="Tmp-discount-goods">
+        {{each result as value i}}
+        <div class="item">
+            <a href="javascript:;" class="clearfix">
+                <!-- 左边商品图片部分 -->
+                <div class="item-left">
+                    {{#value.productImgSm}}
+                </div>
+                <!-- 右边商品介绍部分 -->
+                <div class="item-right">
+                    <!-- 商品标题 -->
+                    <div class="title">
+                        {{value.productName}}
+                        <span>{{value.productPinkage}}</span>
+                    </div>
+                    <!-- 信息部分 包括商家 时间 评论数 -->
+                    <div class="info clearfix">
+                        <span href="#">{{value.productFrom}} | {{value.productTime}}</span>
+                        <span>
+                            <i class="icon-staroff"></i>
+                            {{value.productComCount.replace(/[\u4e00-\u9fa5]/g,'')}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+
+    <!-- 引入模板引擎 -->
+    <script src="./lib/template/template.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet/less" href="../less/hourHot.less">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="../lib/less/less.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header id="top-bar">
+        <div class="return">
+            <a href="javascript:history.back(-1)">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                    </a>
+        </div>
+        <div class="downloadApp">
+            <a href="">
+                                <img src="../images/header_app.png" alt="">
+                        </a>
+        </div>
+        <p>国内折扣热度排行榜-12点档</p>
+    </header>
+
+    <main id="main">
+        <ul>
+
+        </ul>
+        <div class="manmanapp">
+            <a href="">
+                    <img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt="">
+                </a>
+        </div>
+        <div class="beforeAfter">
+            <div class="before">
+                <a href="">
+                    <上一小时</a>
+            </div>
+            <div class="after">
+                <a href="">下一小时></a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <ul>
+            <li class="login">登录</li>
+            <li class="register">注册</li>
+            <li class="return-top">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </li>
+        </ul>
+
+        <div class="m-inf">
+            <p>
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机下载</a>
+                <a href="http://m.manmanbuy.com">
+                                慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+
+    </footer>
+
+    <script src="../js/hourHot.js"></script>
+    <script src="../lib/template/template.js"></script>
+
+    <script type="text/html" id="lis">
+        {{each result as value i}}
+        <li>
+            <a href="./zhekou.html?productId={{value.productId}}"></a>
+            <i class="rank">NO.{{i+1}}</i>
+            <div class="img">
+               {{#value.productImg}}
+            </div>
+            <div class="content">
+                <div class="top-content">
+                    <div class="t-content">{{value.productName}}</div>
+                    <div class="bottom-c">{{value.productPrice}}</div>
+                </div>
+                <div class="mall">{{value.productFrom}}</div>
+            </div>
+        </li>
+
+        {{/each}}
+
+    </script>
+</body>
+
+</html>

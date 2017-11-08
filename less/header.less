@@ -1,0 +1,69 @@
+ /*顶部*/
+
+ #topbar {
+    /*头部logo跟下载按钮*/
+    .topbar-img {
+        width: 100%;
+        height: 2.55rem;
+        background-color: #ff841d;
+        >a {
+            padding: 0.6rem;        
+            display: block;
+            margin-left: 0.25rem;
+            /*logo*/
+            &.l-logo {
+                float: left;
+                line-height: 1.25rem;
+                >img {
+                    width: 9.35rem;
+                    height: 1.25rem;
+                }
+            }
+            /*右边下载按钮*/
+            &.r-appDown {
+                float: right;
+                padding: 0.35rem;
+                >img {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                }
+            }
+        }
+    }
+    /*搜索框*/
+    .topbar-search {
+        background-color: #fff;
+        width: 100%;
+        height: 3rem;
+        padding: 0.5rem 0.6rem;
+        position: relative;
+        border-bottom: 1px solid #e6e6e6;
+        border-top: 1px solid #e6e6e6;
+        >.topbar-form {
+            margin-right: 6rem;
+            height: 100%;
+            /*搜索框*/
+            >.search-txt {
+                width: 100%;
+                height: 100%;
+                background-color: #f1f1f1;
+                display: inline-block;
+                border-radius: 30px;
+                padding-left: 3%;
+            }
+            /*搜索按钮*/
+            >.search-btn {
+                width: 3.15rem;
+                height: 1.5rem;
+                background-color: #ff841d;
+                border-radius: 30px;
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+                color: #fff;
+                position: absolute;
+                right: 0.6rem;
+                top: 0.5rem;
+            }
+        }
+    }
+}

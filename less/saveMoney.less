@@ -1,0 +1,165 @@
+@import 'base.less';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// 顶部栏
+#top-bar {
+    box-sizing: border-box;
+    height: 44px;
+    background-color: #ff841d;
+    color: white;
+    line-height: 44px;
+    .return {
+        width: 50px;
+        float: left;
+        text-align: center;
+        a {
+            i {
+                font-size: 17px;
+                color: white;
+            }
+        }
+    }
+    >p {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 50px;
+    }
+    .downloadApp {
+        width: 50px;
+        float: right;
+        text-align: center;
+        a {
+            display: block;
+            img {
+                width: 40px;
+            }
+        }
+    }
+}
+
+//商品主体
+#main {
+    max-width: 960px;
+    background-color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    margin: 0px auto;
+    .productList {
+        ul {
+            overflow: hidden;
+            li {
+                width: 50%;
+                float: left;
+                padding: 10px 0 0 10px;
+                border: 1px solid #ccc;
+                border-left-width: 0;
+                a {
+                    text-decoration: none;
+                    .img{
+                        margin: 10px auto;
+                        width: 140px;
+                        height: 140px;                        
+                        img{
+                            width: 140px;
+                            height: 140px;
+                        }
+                    }
+                    .p-name{
+                        font-size: 14px;
+                        padding:0 8px;
+                        text-align: left;
+                        color: #333;
+                        height: 36px;
+                        line-height: 18px;
+                    }
+                    .price{
+                        padding:0 8px;  
+                        color: #ff6c00;
+                        height: 18px;
+                        line-height: 18px;                      
+                    }
+                    .mall{
+                        padding:0 8px; 
+                        color: #a1a1a1;
+                        font-size: 12px;
+                        text-align: left;                       
+                    }
+                }
+            }
+        }
+    }
+
+    .manmanapp{
+        width: 60px;
+        height: 67px;
+        position: fixed;
+        right: 0;
+        bottom:30px;
+        a{
+            img{
+                width: 60px;
+                height: 67px;
+            }
+        }
+    }
+
+}
+
+
+
+
+// 尾巴
+#footer {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    ul {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        .login {
+            float: left;
+            height: 30px;
+            width: 33.33%;
+            line-height: 30px;
+            border-right: 1px solid #ccc;
+        }
+        .register {
+            float: left;
+            height: 30px;
+            width: 33.33%;
+            line-height: 30px;
+            border-right: 1px solid #ccc;
+        }
+        .return-top {
+            float: left;
+            height: 30px;
+            width: 33.33%;
+            line-height: 30px;
+            img {
+                width: 15px;
+                height: 15px;
+                vertical-align: middle;
+                margin-top: -5px;
+            }
+        }
+    }
+    .m-inf {
+        text-align: center;
+        font-size: 12px;
+        p:first-of-type {
+            a:first-of-type {
+                color: red;
+                font-size: 12px;
+            }
+            a:last-of-type {
+                color: #666;
+                font-size: 12px;
+            }
+        }
+        p:last-of-type {}
+    }
+}

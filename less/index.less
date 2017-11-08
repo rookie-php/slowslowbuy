@@ -1,0 +1,221 @@
+   // 引入初始化样式
+   @import 'base.less';
+   // 引入头部样式
+   @import 'header.less';
+   
+   /*定义导航条背景色*/
+   @navBar-color : #ff9000;
+   /*导航部分*/
+   
+   #nav {
+       width: 100%;
+       border-bottom: 3px solid #f1f1f1;
+       padding-bottom: 1rem;
+       >.nav-ul {
+           width: 100%;
+           >li {
+               width: 25%;
+               float: left;
+               margin-top: 1rem;
+               >a {
+                   text-align: center;
+                   width: 100%;
+                   display: block;
+                   >img {
+                       width: 3.5rem;
+                   }
+                   >p {
+                       text-align: center;
+                       margin-top: 0.25rem;
+                       color: #5a5a5a;
+                       font-size: 0.7rem;
+                   }
+               }
+           }
+       }
+       /*隐藏部分*/
+       >.nav-ul-hide {
+           width: 100%;
+           display: none;
+           >li {
+               width: 25%;
+               float: left;
+               margin-top: 1rem;
+               >a {
+                   text-align: center;
+                   width: 100%;
+                   display: block;
+                   >img {
+                       width: 3.5rem;
+                   }
+                   >p {
+                       text-align: center;
+                       margin-top: 0.25rem;
+                       color: #5a5a5a;
+                       font-size: 0.7rem;
+                   }
+               }
+           }
+       }
+   }
+   
+   
+   /*超值折扣部分*/
+   
+   #discount-goods {
+       width: 100%;
+       background-color: #efefef;
+       /*超值折扣标题*/
+       >.discount-title {
+           width: 100%;
+           height: 1.75rem;
+        //    background-color: @navBar-color;
+           border-bottom: solid 1px #ffc881;
+           background: linear-gradient(#ffaf47,@navBar-color);
+           >.discount-head {
+               float: left;
+               height: 100%;
+               line-height: 1.75rem;
+               margin-left: 0.75rem;
+               font-weight: bold;
+               font-size: 0.9rem;
+               color: #fff;
+           }
+           >.discount-img {
+               float: right;
+               height: 100%;
+               margin-right: 0.75rem;
+               >img {
+                   width: 1rem;
+                   height: 1rem;
+                   margin-top: 0.4rem;
+               }
+           }
+       }
+       /*超值折扣商品*/
+       >.discount-body {
+           width: 100%;
+           background-color: #fff;
+           // 每个商品列表
+           >.item {
+               width: 100%;
+               padding: 0.7rem 0.4rem;
+               border-bottom: 1px solid #e0e0e0;
+               >a {
+                   display: block;
+                   width: 100%;
+                   // 左边商品图片部分
+                   >.item-left {
+                       float: left;
+                       width: 5.5rem;
+                       >img {
+                           width: 5rem;
+                           height: 5rem;
+                       }
+                   } 
+                   // 右边商品介绍部分
+                   >.item-right {
+                       // width: 100%;
+                       padding-left: 5.5rem;
+                       >.title {
+                           font-size: 0.8rem;
+                           color: #333;
+                           font-weight: bold;
+                           >span {
+                               color: #ff6c00;
+                           }
+                       }
+   
+                       >.info {
+                           // width: 100%;
+                           color: #a1a1a1;
+                           font-size: 0.6rem;
+                           position: relative;                
+                           >span {
+                               &:first-of-type {
+                                   position: absolute;
+                                   left: 0px;
+                                   bottom: 0px;
+                               }
+   
+                               &:last-of-type {
+                                   position: absolute;
+                                   right: 0.5rem;
+                                   bottom: 0px;
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+       }
+       /*更多优惠信息*/
+       >.discount-footer {
+           background-color: #efefef;
+           padding: 0.5rem;
+           margin-top: 0.5rem;
+           >a {
+               height: 1.6rem;
+               display: block;
+               text-align: center;
+               line-height: 1.6rem;
+               background: #F4F4F4;
+               color: #5a5a5a;
+               text-decoration: none;
+               font-size: 0.65rem;
+               border: 1px solid #dddddd;
+               background-image: linear-gradient(#ffffff, #f4f4f4);
+               border-radius: 5px;
+           }
+       }
+   }
+   
+   /*品牌排行*/
+   #brand-charts {
+       height: 1.75rem;
+       width: 100%;
+       background: linear-gradient(#ffaf47,@navBar-color);
+       border-bottom: solid 1px #ffc881;
+       line-height: 1.75rem;
+           >h4 {
+               float: left;
+               margin-left: 0.75rem;
+               font-weight: bold;
+               font-size: 0.9rem;
+               color: #fff;
+           }
+   
+           >img {
+               float: right;            
+               width: 1rem;
+               height: 1rem;
+               margin-top: 0.4rem;
+               margin-right: 0.75rem;
+           }
+   }
+   
+  /*固定部分*/
+  #fixed {
+      position: fixed;
+      right: 0;
+      bottom: 3rem;
+      >.downLoad-img {
+          >img {
+              width: 3rem;
+              height: 3.35rem;
+          }
+      }
+      >.backTop {
+          width: 2.25rem;
+          height: 2.25rem;
+          border: 1px solid #ccc;
+          background-color: #fff;
+          position: absolute;
+          bottom: -2.5rem;
+          right: 0.3rem;
+          border-radius: 50%;
+      }
+  }
+   
+   // 引入尾部样式
+   @import 'footer.less';

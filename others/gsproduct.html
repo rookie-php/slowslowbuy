@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>凑单品</title>
+	<link rel="stylesheet" href="../fonts1/iconfont.css">
+	<link rel="stylesheet/less" href="../less/item.less">
+</head>
+<body>
+<!-- 容器 -->
+<div id="layout">
+	<!-- 顶部通栏 -->
+<div id="top-bar">
+	<div class="top">
+		<i class="iconfont icon-iconfont0104"></i>
+		<h1>凑单品</h1>
+	</div>
+</div>
+<!-- 查询 -->
+<section id="search" class="clearfix">
+	<div class="search-title clearfix">
+		<ul class="clearfix">
+			<li>
+				<a href="javascript:;">京东
+				<i class="iconfont icon-xialajiantouxiangxia"></i>
+				</a>
+			</li>
+			<li><a href="javascript:;">华北
+				<i class="iconfont icon-xialajiantouxiangxia"></i>
+
+				</a>
+			</li>
+			<li><a href="javascript:;">1元
+				<i class="iconfont icon-xialajiantouxiangxia"></i>
+			</a></li>
+		</ul>
+		<div><i class="iconfont icon-chaxun"></i></div>
+	</div>
+	<div class="sublist">
+		<ul class="shop">
+			<li class="active">京东<i class="iconfont icon-icon "></i></li>
+			<li>京东<i class="iconfont icon-icon "></i></li>
+			<li>京东<i class="iconfont icon-icon "></i></li>
+		</ul>
+		<ul class="region">
+			<li>华东（山东、浙江等）
+			<i class="iconfont icon-icon "></i></li>
+			<li>华东（山东、浙江等）
+			<i class="iconfont icon-icon "></i></li>
+			<li>华东（山东、浙江等）
+			<i class="iconfont icon-icon "></i></li>
+		</ul>
+		<ul class="price">
+			<li>3-5元<i class="iconfont icon-icon "></i></li>
+			<li>3-5元<i class="iconfont icon-icon "></i></li>
+			<li>3-5元<i class="iconfont icon-icon "></i></li>
+		</ul>
+	</div>
+</section>
+<!-- 商品信息 -->
+<main id="info" class="clearfix">
+	<ul class="clearfix">
+		<li>
+			<a href="#">
+				<img src="http://img11.360buyimg.com/n1/jfs/t1468/327/1195618780/70676/4f5853ed/55c8453bNa333c0c5.jpg" alt="">
+				<div class="info">
+					<p class="title">
+					北京联通36元沃游特权卡含6.5G月流量+激活到账50元话费手机号卡流量卡
+					</p>
+					<div class="price">￥<em>0.00</em></div>
+				</div>
+
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="http://img11.360buyimg.com/n1/jfs/t1468/327/1195618780/70676/4f5853ed/55c8453bNa333c0c5.jpg" alt="">
+				<div class="info">
+					<p class="title">
+					北京联通36元沃游特权卡含6.5G月流量+激活到账50元话费手机号卡流量卡
+					</p>
+					<div class="price">￥<em>0.00</em></div>
+				</div>
+
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="http://img11.360buyimg.com/n1/jfs/t1468/327/1195618780/70676/4f5853ed/55c8453bNa333c0c5.jpg" alt="">
+				<div class="info">
+					<p class="title">
+					北京联通36元沃游特权卡含6.5G月流量+激活到账50元话费手机号卡流量卡
+					</p>
+					<div class="price">￥<em>0.00</em></div>
+				</div>
+
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="http://img11.360buyimg.com/n1/jfs/t1468/327/1195618780/70676/4f5853ed/55c8453bNa333c0c5.jpg" alt="">
+				<div class="info">
+					<p class="title">
+					北京联通36元沃游特权卡含6.5G月流量+激活到账50元话费手机号卡流量卡
+					</p>
+					<div class="price">￥<em>0.00</em></div>
+				</div>
+
+			</a>
+		</li>
+
+	</ul>
+</main>
+</div>
+
+
+<script type="text/html" id="shopTmp">
+{{each result as value i}}
+	<li shopId={{value.shopId}}>{{value.shopName}}<i class="iconfont icon-icon "></i></li>
+{{/each}}
+</script>
+<script type="text/html" id="regionTmp">
+{{each result as value i}}
+	<li areaId={{value.areaId}}>{{value.areaName}}<i class="iconfont icon-icon "></i></li>
+{{/each}}
+</script>
+<script type="text/html" id="lis">
+{{each result as value i}}
+		<li>
+			<a href="#">
+				<img src="../images/rolling.gif" pic="{{value.productImg}}" alt="">
+				<div class="info">
+					<p class="title">{{value.productName}}</p>
+					<div class="price"><em>{{value.productPrice}}</em></div>
+				</div>
+
+			</a>
+		</li>
+{{/each}}
+</script>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/template/template.js"></script>
+<!-- <script src="../lib/lazyload/jquery.lazyload.js"></script> -->
+<script src="../lib/less/less.js"></script>
+<script src="../js/item.js"></script>
+</body>
+</html>

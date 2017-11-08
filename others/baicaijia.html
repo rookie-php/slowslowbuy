@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet"  href="../lib/fonts/iconfont.css">
+	<link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+	<link rel="stylesheet/less" href="../less/whiteVegetables.less">
+	<title>白菜价</title>
+</head>
+<body>
+<!-- 顶部通栏 -->
+<header id="top-bar">
+	<a href="#">白菜价</a>
+	<form action="">
+		<input type="text" placeholder="好宝贝 等你搜">
+	</form>
+	<a href="#">
+		<i class="iconfont icon-daohanganniu"></i>
+	</a>
+</header>
+<!-- 轮播图 -->
+<div class="swiper-container" id="slide">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+	    <a href="#">
+	    	<img src="https://img.alicdn.com/imgextra/i3/2087740207/TB2NXpRaMfH8KJjy1zcXXcTzpXa_!!2087740207.jpg" alt="">
+	    </a>
+        </div>
+        <div class="swiper-slide">
+        <a href="#">
+        	<img src="http://thumbnail.qingtaoke.com/img/xca/201711/2017110216144983208442.jpg" alt="">
+        </a>
+        </div>
+        <div class="swiper-slide">
+        	<img src="http://thumbnail.qingtaoke.com/img/xca/201711/2017110118594520866444.jpg" alt="">
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+<!-- 导航 -->
+<section id="nav-bar">
+	<ul class="clearfix">
+	</ul>
+</section>
+<!-- 商品列表 -->
+<section id="commodity-list" class="clearfix">
+	<div class="commodity clearfix">
+			<img src="http://img2.tbcdn.cn/tfscom/i1/1697659841/TB1oaWjoMMPMeJjy1XdXXasrXXa_!!0-item_pic.jpg_230x230q90.jpg" alt="">
+			<div class="info">
+				<p class="title">多层PVC只能防爆，保暖舒适，卡通图案更适合萌萌的你哦！！</p>
+				<div  class="price"><span>券后￥</span><i>106.6</i>&nbsp;&nbsp; &nbsp;<del>￥206</del></div>
+				<div class="ticket">
+					<div class="plan"><span>75%</span></div>
+					<span>已领10000张</span>
+				</div>
+				<div class="get-coupon">
+					<a href="#">点此领10元优惠卷</a>
+					<a href="#">下单链接</a>
+				</div>
+			</div>
+	</div>
+	<div class="commodity clearfix">
+			<img src="http://img2.tbcdn.cn/tfscom/i1/1697659841/TB1oaWjoMMPMeJjy1XdXXasrXXa_!!0-item_pic.jpg_230x230q90.jpg" alt="">
+			<div class="info">
+				<p class="title">多层PVC只能防爆，保暖舒适，卡通图案更适合萌萌的你哦！！</p>
+				<div  class="price"><span>券后￥</span><i>106.6</i>&nbsp;&nbsp; &nbsp;<del>￥206</del></div>
+				<div class="ticket">
+					<div class="plan"><span>75%</span></div>
+					<span>已领10000张</span>
+				</div>
+				<div class="get-coupon">
+					<a href="#">点此领10元优惠卷</a>
+					<a href="#">下单链接</a>
+				</div>
+			</div>
+	</div>
+</section>
+<!-- 快捷操作 -->
+<section id="shortcut" class="clearfix">
+	<div class="row">
+		<div class="login">
+			<a href="#">登陆</a>
+		</div>
+		<div class="register">
+					<a href="#">注册</a>
+		</div>
+		<div class="backtop">
+			<a href="#slide">
+			<img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+			返回顶部</a>
+		</div>
+	</div>
+</section>
+<!-- 底部模块 -->
+<section id="foot">
+			<p>
+				<a href="#" class="phoneapp">手机APP下载</a>
+				<a href="#">慢慢买手机版</a>
+			-- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+</section>
+<div id="backtop">
+	<a href="#slide"><i class="iconfont icon-icon-go-top"></i></a>
+</div>
+<script type="text/html" id="nvatmp">
+{{each result as value i}}
+	{{if i<6}}
+	<li titleId={{value.titleId}}><a href="#">{{value.title}}</a></li>
+	{{/if}}
+
+{{/each}}
+</script>
+<script type="text/html" id="commodityTmp">
+{{each result as value i}}
+<div class="commodity clearfix" productId="{{value.productId}}">
+	{{#value.productImg}}
+	<div class="info">
+		<p class="title">{{#value.productName}}</p>
+		<div  class="price">{{#value.productPrice}}</div>
+		{{#value.productCouponRemain}}
+		<div class="get-coupon">
+			{{#value.productCoupon}}
+			{{#value.productHref}}
+		</div>
+	</div>
+</div>
+{{/each}}
+</script>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/less/less.js"></script>
+<script src="../lib/template/template.js"></script>
+<script src="../lib/swiper/js/swiper.js"></script>
+<script src="../js/whiteVegetables.js"></script>
+</body>
+</html>

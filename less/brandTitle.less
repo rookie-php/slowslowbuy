@@ -1,0 +1,53 @@
+  /*引入初始化样式*/
+
+  @import 'base.less';
+  /*引入公用头部样式*/
+
+  @import 'header.less'; 
+  
+  // 商品路径
+  .pd-nav {
+      height: 2rem;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      line-height: 2rem;
+      padding-left: 0.75rem;
+      font-size: 0.7rem;
+      background: linear-gradient(#fff, #ebebeb);
+  }
+
+/*热门品牌排行*/
+#main {
+    h3 {
+        font-size: 0.8rem;
+        color: #874604;
+        height: 2rem;
+        padding-left: 0.5rem;
+        line-height: 2rem;
+        margin: 0.5rem 0.25rem;
+        border: 1px solid #ccc;
+        background-color: #eee;
+    }
+
+    >ul {
+        background: #ebebeb;
+        >li {
+            padding: 0px 0.5rem;
+            > a {
+                display: block;
+                height: 2rem;
+                line-height: 2rem;
+                color: #000;
+                font-size: 0.8rem;
+                background: url('../images/arrow1.gif') right center no-repeat;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+
+
+  /*引入公用底部样式*/
+
+  @import 'footer.less';

@@ -1,0 +1,185 @@
+ /*引入初始化样式*/
+
+ @import 'base.less';
+ /*复制公用头部样式 并修改*/
+ /*顶部*/
+
+ #topbar {
+     /*头部logo跟下载按钮*/
+     .topbar-img {
+         width: 100%;
+         height: 2.55rem;
+         background-color: #ff841d;
+         >a {
+             padding: 0.6rem;
+             display: block;
+             margin-left: 0.25rem;
+             /*logo*/
+             &.l-logo {
+                 float: left;
+                 line-height: 1.25rem;
+             }
+             /*右边下载按钮*/
+             &.r-appDown {
+                 float: right;
+                 padding: 0.35rem;
+                 >img {
+                     width: 1.7rem;
+                     height: 1.7rem;
+                 }
+             }
+         }
+         >h1 {
+             text-align: center;
+             color: #fff;
+             font-size: 1rem;
+             line-height: 2.5rem;
+         }
+     }
+ }
+ /*引入公用列表页样式*/
+ /*公用列表主体部分*/
+
+ #main {
+     /*主体导航*/
+     >.main-title {
+         height: 2rem;
+         border-bottom: 1px solid #ccc;
+         >ul {
+             padding: 0px 0.25rem;
+             >li {
+                 float: left;
+                 width: 25%;
+                 text-align: center;
+                 line-height: 2rem;
+                 >a {
+                     display: block
+                 }
+             }
+         }
+     }
+     /*超值折扣商品*/
+     >.discount-body {
+        width: 100%;
+        background-color: #fff;
+        // 每个商品列表
+        >.item {
+            width: 100%;
+            padding: 0.7rem 0.4rem;
+            border-bottom: 1px solid #e0e0e0;
+            >a {
+                display: block;
+                width: 100%;
+                // 左边商品图片部分
+                >.item-left {
+                    float: left;
+                    width: 5.5rem;
+                    >img {
+                        width: 5rem;
+                        height: 5rem;
+                    }
+                } 
+                // 右边商品介绍部分
+                >.item-right {
+                    // width: 100%;
+                    padding-left: 5.5rem;
+                    >.title {
+                        font-size: 0.8rem;
+                        color: #333;
+                        font-weight: bold;
+                        >span {
+                            color: #ff6c00;
+                        }
+                    }
+
+                    >.info {
+                        // width: 100%;
+                        color: #a1a1a1;
+                        font-size: 0.6rem;
+                        position: relative;                
+                        >span {
+                            &:first-of-type {
+                                position: absolute;
+                                left: 0px;
+                                bottom: 0px;
+                            }
+
+                            &:last-of-type {
+                                position: absolute;
+                                right: 0.5rem;
+                                bottom: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+     /*主体页脚 分页栏 相关连接*/
+     >.main-footer {
+         padding: 1rem 0.5rem;
+         background-color: #f1f1f1;
+         /*分页*/
+         >.paging {
+             p {
+                 width: 33.333%;
+                 float: left;
+                 text-align: center;
+                 height: 1.7rem;
+                 line-height: 1.7rem;
+             }
+             >.prev-page {
+                 >a {
+                     padding: 0.4rem 1rem;
+                     border-radius: 5px;
+                     text-align: center;
+                     font-size: 0.7rem;
+                     background-color: #d4d4d4;
+                     border-bottom: 1px solid #bababa;
+                     box-shadow: 0 0 0.05rem #666;
+                     color: #333;
+                 }
+             }
+             >.select {
+                 >select {
+                     padding: 0.5rem 0.75rem;
+                     ;
+                 }
+             }
+             >.next-page {
+                 >a {
+                     padding: 0.4rem 1rem;
+                     border-radius: 5px;
+                     text-align: center;
+                     font-size: 0.7rem;
+                     background-color: #d4d4d4;
+                     border-bottom: 1px solid #bababa;
+                     box-shadow: 0 0 0.05rem #666;
+                     color: #333;
+                 }
+             }
+         }
+         /*相关连接*/
+         >.links {
+             margin-top: 1.25rem;
+             >a {
+                 display: inline-block;
+                 margin-top: 0.5rem;
+             }
+         }
+     }
+ }
+
+ /*菜单导航部分*/
+ #menu {
+       height: 1.8rem;
+       background-color: #ebebeb;
+       border-top: solid 1px #ebebeb;
+       border-bottom: 1px solid #ccc;
+       line-height: 1.8rem;
+       padding-left: 0.4rem;
+       font-size: 0.7rem;
+ }
+
+/*引入底部公用样式*/
+@import 'footer.less';

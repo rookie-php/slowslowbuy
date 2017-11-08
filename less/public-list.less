@@ -1,0 +1,113 @@
+ /*公用列表主体部分*/
+
+ #main {
+     /*主体导航*/
+     >.main-title {
+         height: 2rem;
+         border-bottom: 1px solid #ccc;
+         >ul {
+             padding: 0px 0.25rem;
+             >li {
+                 float: left;
+                 width: 25%;
+                 text-align: center;
+                 line-height: 2rem;
+                 >a {
+                     display: block
+                 }
+             }
+         }
+     }
+     /*主体内容 产品列表*/
+     >.main-body {
+         >ul {
+             >li {
+                 padding: 0.5rem 0.4rem;
+                 border-bottom: 1px solid #ccc;
+                 >a {
+                     display: block;
+                     >.img {
+                         float: left;
+                         img {
+                             width: 6rem;
+                             height: 6rem;
+                         }
+                     }
+                     >.info {
+                         padding-left: 6.5rem;
+                         width: 100%;
+                         .title {
+                             color: #333333;
+                             font-size: 0.75rem;
+                         }
+                         .price {
+                             color: #ed0000;
+                             font-size: 0.9rem;
+                             margin-top: 2rem;
+                         }
+                         .other {
+                             color: #a1a1a1;
+                             margin-top: 0.25rem;
+                             .comment {
+                                 float: right;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     /*主体页脚 分页栏 相关连接*/
+     >.main-footer {
+         padding: 1rem 0.5rem;
+         background-color: #f1f1f1;
+         /*分页*/
+         >.paging {
+             p {
+                 width: 33.333%;
+                 float: left;
+                 text-align: center;
+                 height: 1.7rem;
+                 line-height: 1.7rem;
+             }
+             >.prev-page {
+                 >a {
+                     padding: 0.4rem 1rem;
+                     border-radius: 5px;
+                     text-align: center;
+                     font-size: 0.7rem;
+                     background-color: #d4d4d4;
+                     border-bottom: 1px solid #bababa;
+                     box-shadow: 0 0 0.05rem #666;
+                     color: #333;
+                 }
+             }
+             >.select {
+                 >select {
+                     padding: 0.5rem 0.75rem;
+                     ;
+                 }
+             }
+             >.next-page {
+                 >a {
+                     padding: 0.4rem 1rem;
+                     border-radius: 5px;
+                     text-align: center;
+                     font-size: 0.7rem;
+                     background-color: #d4d4d4;
+                     border-bottom: 1px solid #bababa;
+                     box-shadow: 0 0 0.05rem #666;
+                     color: #333;
+                 }
+             }
+         }
+         /*相关连接*/
+         >.links {
+             margin-top: 1.25rem;
+             >a {
+                 display: inline-block;
+                 margin-top: 0.5rem;
+             }
+         }
+     }
+ }

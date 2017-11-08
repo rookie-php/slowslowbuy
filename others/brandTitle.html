@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet/less" href="../less/brandTitle.less">
+</head>
+
+<body>
+    <!-- 公用头部 -->
+    <header id="topbar">
+        <!-- logo部分 -->
+        <div class="topbar-img clearfix">
+            <!-- 左边的Logo -->
+            <a href="../index.html" class="l-logo">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+            <!-- 右边的下载图标 -->
+            <a href="#" class="r-appDown">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+        <!-- 搜索部分 -->
+        <div class="topbar-search">
+            <!-- 表单 -->
+            <form action="" class="topbar-form">
+                <!-- 搜索框 -->
+                <input type="text" class="search-txt" placeholder="请输入你想比价的商品">
+                <!-- 搜索按钮 -->
+                <input type="submit" value="搜索" class="search-btn">
+            </form>
+        </div>
+    </header>
+
+    <!-- 导航部分 -->
+    <div class="pd-nav">
+        <a href="#">首页</a>&gt;
+        <a href="#">品牌大全</a>
+    </div>
+
+    <!-- 热门品牌排行榜 -->
+    <main id="main">
+        <h3>热门品牌排行</h3>
+        <ul>
+            <li><a href="#">平板电视十大品牌</a></li>
+            <li><a href="#">平板电视十大品牌</a></li>
+            <li><a href="#">平板电视十大品牌</a></li>
+            <li><a href="#">平板电视十大品牌</a></li>
+            <li><a href="#">平板电视十大品牌</a></li>
+        </ul>
+    </main>
+
+    <!-- 公用底部 -->
+    <footer id="footer">
+        <!-- 登录 注册 返回顶部按钮 -->
+        <div class="footer-top clearfix">
+            <!-- 登录按钮 -->
+            <a href="#" class="login">登录</a>
+            <!-- 注册按钮 -->
+            <a href="#" class="register">注册</a>
+            <!-- 返回顶部 -->
+            <a href="#" class="backTop">
+                <img src="../images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <!-- 网页基本信息 -->
+        <div class="footer-info">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 定义模版 -->
+    <script type="text/html" id="TmpTop10">
+        {{each result as value i}}
+        <li><a href="brandLists.html?id={{value.brandTitleId}}">{{value.brandTitle}}</a></li>
+        {{/each}}
+    </script>
+
+    <script src="../lib/less/less.js"></script>
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../lib/template/template.js"></script>
+    <script src="../js/brandTitle.js"></script>
+    <script>
+        $(function(){
+        //获取排行榜数据
+        $.ajax({
+            url:'http://157.122.54.189:9090/api/getbrandtitle',
+            success: function(data){
+                var html = template('TmpTop10',data);
+                $('#main ul').html(html);
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>

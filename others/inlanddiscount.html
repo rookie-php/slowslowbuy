@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet/less" href="../less/saveMoney.less">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/less/less.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="top-bar">
+        <div class="return">
+            <a href="javascript:history.back(-1)">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+        </div>
+        <div class="downloadApp">
+            <a href="">
+                        <img src="../images/header_app.png" alt="">
+                </a>
+        </div>
+        <p>国内折扣</p>
+
+    </header>
+
+    <main id="main">
+        <div class="productList">
+            <ul>
+               
+            </ul>
+        </div>
+        <div class="manmanapp">
+            <a href="">
+                <img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt="">
+            </a>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <ul>
+            <li class="login">登录</li>
+            <li class="register">注册</li>
+            <li class="return-top">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </li>
+        </ul>
+
+        <div class="m-inf">
+            <p>
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机下载</a>
+                <a href="http://m.manmanbuy.com">
+                            慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+
+    </footer>
+
+    <script src="../js/saveMoney.js"></script>
+    <script src="../lib/template/template.js"></script>
+    <script type="text/html" id="productsTmp">
+        {{each result as value i}}
+
+        <li>
+            <a href="./zhekou.html?productId={{value.productId}}">
+                <div class="img">
+                    {{#value.productImg}}
+                </div>
+                <p class="p-name">{{value.productName}}</p>
+                <p class="price">{{value.productPrice}}</p>
+                <span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

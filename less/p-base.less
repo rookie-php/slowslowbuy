@@ -1,0 +1,63 @@
+body,
+html,
+input,
+header,
+section,
+a,
+i,
+main,
+div,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+em,
+strong,
+sub,
+table,
+td,
+tr,
+ul,
+li{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+};
+a{	
+	background-color: transparent;
+	text-decoration: none;
+	color:#333;
+}
+input{
+	border: none;
+	outline: none;
+}
+li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+img{
+	vertical-align: middle;
+}
+/* 清楚浮动 */
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+body,html{
+	height: 100%;
+}
+/* 定义颜色 */
+@color-fff:#fff;
+@color-ccc:#ccc;
+@main-color:#ff841d;
+@border-color:#e6e6e6;
+@backgound-color:#f2f2f2;

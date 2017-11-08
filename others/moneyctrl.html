@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入less文件 -->
+    <link rel="stylesheet/less" href="../less/moneyctrl.less">
+    <!-- 引入字体文件 -->
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+
+<body>
+    <!-- 引入公用头部 并做修改-->
+    <header id="topbar">
+        <!-- logo部分 -->
+        <div class="topbar-img clearfix">
+            <!-- 左边的箭头 -->
+            <a href="../index.html" class="l-logo">
+                <i class="icon-back"></i>
+            </a>
+            <!-- 右边的下载图标 -->
+            <a href="#" class="r-appDown">
+                <img src="../images/header_app.png" alt="">
+            </a>
+            <!-- 中间的文字 -->
+            <h1>省钱控 - 最新优惠</h1>
+        </div>
+    </header>
+    <!-- 引入公用主体 并作修改 -->
+    <!-- 主体部分 -->
+    <main id="main">
+
+        <!-- 超值折扣商品 -->
+        <div class="discount-body">
+            <!-- 每个商品列表 -->
+            <div class="item">
+                <a href="#" class="clearfix">
+                    <!-- 左边商品图片部分 -->
+                    <div class="item-left">
+                        <img src="../images/ic_temai.png" alt="">
+                    </div>
+                    <!-- 右边商品介绍部分 -->
+                    <div class="item-right">
+                        <!-- 商品标题 -->
+                        <div class="title">
+                            11.4 京东服饰神券 全品类优惠券 免运费券 优惠领券汇总
+                            <span>服饰满300元五折</span>
+                        </div>
+                        <!-- 信息部分 包括商家 时间 评论数 -->
+                        <div class="info clearfix">
+                            <span href="#">慢慢买 | 11-04 08:37</span>
+                            <span>
+                                <i class="icon-comment"></i>
+                                1
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 主体页脚 分页及相关连接 -->
+        <div class="main-footer">
+            <!-- 分页 -->
+            <div class="paging clearfix">
+                <p class="prev-page">
+                    <a href="javascript:;">上一页</a>
+                </p>
+                <p class="select">
+                    <select name="" id="page-choose">
+                        <option value="1">1/15</option>
+                        <option value="2">2/15</option>
+                        <option value="3">3/15</option>
+                        <option value="4">4/15</option>
+                        <option value="5">5/15</option>
+                        <option value="6">6/15</option>
+                    </select>
+                </p>
+                <p class="next-page">
+                    <a href="javascript:;">下一页</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 公用底部菜单部分 -->
+    <div id="menu">
+        <a href="#">首页</a>
+        &nbsp;>&nbsp;省钱控
+    </div>
+    <!-- 引入底部公用部分 -->
+    <!-- 公用底部 -->
+    <footer id="footer">
+        <!-- 登录 注册 返回顶部按钮 -->
+        <div class="footer-top clearfix">
+            <!-- 登录按钮 -->
+            <a href="#" class="login">登录</a>
+            <!-- 注册按钮 -->
+            <a href="#" class="register">注册</a>
+            <!-- 返回顶部 -->
+            <a href="#" class="backTop">
+                <img src="../images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <!-- 网页基本信息 -->
+        <div class="footer-info">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 引擎模块 -->
+    <!-- 超值折扣模块 -->
+    <script type="text/html" id="Tmp-discount-goods">
+        {{each result as value i}}
+        <div class="item">
+            <a href="#" class="clearfix">
+                <!-- 左边商品图片部分 -->
+                <div class="item-left">
+                    {{#value.productImgSm}}
+                </div>
+                <!-- 右边商品介绍部分 -->
+                <div class="item-right">
+                    <!-- 商品标题 -->
+                    <div class="title">
+                        {{value.productName}}
+                        <span>{{value.productPinkage}}</span>
+                    </div>
+                    <!-- 信息部分 包括商家 时间 评论数 -->
+                    <div class="info clearfix">
+                        <span href="#">{{value.productFrom}} | {{value.productTime}}</span>
+                        <span>
+                            <i class="icon-staroff"></i>
+                            {{value.productComCount.replace(/[\u4e00-\u9fa5]/g,'')}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 页面数模块 -->
+    <script type="text/html" id="TmpPage">
+        {{each pages as value i}}
+        <option value="{{i+1}}">{{i+1}}/{{pages.length}}</option>
+        {{/each}}
+    </script>
+    <!-- 引入jq -->
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+    <!-- 引入模版引擎 -->
+    <script src="../lib/template/template.js"></script>
+    <!-- 引入编译器 -->
+    <script src="../lib/less/less.js"></script>
+    <!-- 引入自己的js -->
+    <script src="../js/moneyctrl.js"></script>
+</body>
+
+</html>

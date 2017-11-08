@@ -1,0 +1,52 @@
+ /*公用底部*/
+ #footer {
+    background-color: #efefef;
+    padding-top: 0.5rem;
+    /*登录 注册 返回顶部模块*/ 
+    >.footer-top {
+        width: 100%;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        >a {
+            float: left;
+            height: 1.7rem;
+            text-align: center;
+            line-height: 1.7rem;
+            border-left: 1px solid #c4c4c4;
+        }
+        /*登录*/
+        >.login {
+            width: 30%;
+            border: none;
+        }
+        /*注册*/
+        >.register {
+            width: 30%;
+        }
+        /*返回顶部*/
+        >.backTop {
+            width: 40%;
+            >img {
+                width: 0.75rem;
+                height: 0.75rem;
+                margin-bottom: 0.25rem;
+            }
+        }
+    }
+
+    /*网页基本信息*/
+    >.footer-info {
+        padding: 0.75rem;
+        >p {
+            text-align: center;
+            >a {
+                &:first-of-type {
+                    color: red;
+                }
+            }
+            &:last-of-type {
+                color: #666;;
+            }
+        }
+    }
+}

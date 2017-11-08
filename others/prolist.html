@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet/less" href="../less/prolist.less">
+    <!-- 引入jquery -->
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+    <!-- 引入编译器 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+<body>
+    <!-- 公用头部 -->
+    <header id="topbar">
+        <!-- logo部分 -->
+        <div class="topbar-img clearfix">
+            <!-- 左边的Logo -->
+            <a href="../index.html" class="l-logo">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+            <!-- 右边的下载图标 -->    
+            <a href="#" class="r-appDown">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+        <!-- 搜索部分 -->
+        <div class="topbar-search">
+            <!-- 表单 -->
+            <form action="" class="topbar-form">
+                <!-- 搜索框 -->
+                <input type="text" class="search-txt" placeholder="请输入你想比价的商品">
+                <!-- 搜索按钮 -->
+                <input type="submit" value="搜索" class="search-btn">
+            </form>
+        </div>
+    </header>
+    
+    <!-- 主体部分 -->
+    <main id="main">
+        <!-- 主体导航 -->
+        <div class="main-title">
+            <ul class="clearfix">
+                <li><a href="#">综合</a></li>
+                <li><a href="#">销量</a></li>
+                <li><a href="#">价格</a></li>
+                <li class="t-screen"><a href="javascript:;">筛选</a></li>
+            </ul>
+        </div>
+        <!-- 主体内容 -->
+        <div class="main-body">
+            <ul class="clearfix">
+                <li>
+                    <a href="#" class="clearfix">
+                        <div class="img">
+                            <img src="./images/Thumb1.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                            小米(MI) 小米电视4A 标准版 L65M5-AZ 65英寸 4K超高清 HDR智能语音液晶电视
+                            </div>
+                            <p class="price"><span>¥</span>1598</p>
+                            <p class="other">
+                                <span>6商城报价</span>
+                                <span class="comment">有2722人评论</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="clearfix">
+                        <div class="img">
+                            <img src="./images/Thumb1.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                小米(MI) 小米电视4A 标准版 L65M5-AZ 65英寸 4K超高清 HDR智能语音液晶电视
+                            </div>
+                            <p class="price">
+                                <span>¥</span>1598</p>
+                            <p class="other">
+                                <span>6商城报价</span>
+                                <span class="comment">有2722人评论</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="clearfix">
+                        <div class="img">
+                            <img src="./images/Thumb1.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                小米(MI) 小米电视4A 标准版 L65M5-AZ 65英寸 4K超高清 HDR智能语音液晶电视
+                            </div>
+                            <p class="price">
+                                <span>¥</span>1598</p>
+                            <p class="other">
+                                <span>6商城报价</span>
+                                <span class="comment">有2722人评论</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="clearfix">
+                        <div class="img">
+                            <img src="./images/Thumb1.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                小米(MI) 小米电视4A 标准版 L65M5-AZ 65英寸 4K超高清 HDR智能语音液晶电视
+                            </div>
+                            <p class="price">
+                                <span>¥</span>1598</p>
+                            <p class="other">
+                                <span>6商城报价</span>
+                                <span class="comment">有2722人评论</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 主体页脚 分页及相关连接 -->
+        <div class="main-footer">
+            <!-- 分页 -->
+            <div class="paging clearfix">
+                <p class="prev-page"><a href="javascript:;" >上一页</a></p>
+                <p class="select">
+                    <select name="" id="page-choose">
+                        <option value="1">1/15</option>
+                        <option value="2">2/15</option>
+                        <option value="3">3/15</option>
+                        <option value="4">4/15</option>
+                        <option value="5">5/15</option>
+                        <option value="6">6/15</option>
+                    </select>
+                </p>
+                <p class="next-page"><a href="javascript:;" >下一页</a></p>      
+            </div>
+            <!-- 相关连接 -->
+            <div class="links">
+                <h4>相关链接:</h4>
+                <a href="#">电视机十大品牌</a>
+                <br>
+                <a href="#">电视机口碑大全</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 公用底部 -->
+    <footer id="footer">
+        <!-- 登录 注册 返回顶部按钮 -->
+        <div class="footer-top clearfix">
+            <!-- 登录按钮 -->
+            <a href="#" class="login">登录</a>
+            <!-- 注册按钮 -->
+            <a href="#" class="register">注册</a>
+            <!-- 返回顶部 -->
+            <a href="#" class="backTop">
+                <img src="../images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <!-- 网页基本信息 -->
+        <div class="footer-info">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 筛选详情 -->
+    <aside id="screen">
+        <!-- 筛选标题 -->
+        <div class="screen-title">筛选</div>
+        <!-- 筛选主体 -->
+        <div class="screen-body">
+            <!-- 每个选项 -->
+            <div class="screen-item">
+                <div class="item-title">
+                    <span class="tn">品牌</span>
+                    <span class="tn-all">全部品牌</span>
+                    <i>^</i>
+                </div>
+                <div class="item-body">
+                    <!-- 默认显示的列表 -->
+                    <ul class="item-ul-show clearfix">
+                        <li><a href="#"  class="bg">全部品牌</a></li>
+                        <li><a href="#">全部品牌</a></li>
+                        <li><a href="#">全部品牌</a></li>
+                        <li><a href="#">全部品牌</a></li>
+                        <li><a href="#">全部品牌</a></li>
+                        <li><a href="#">全部品牌</a></li>
+                    </ul>
+                    <!-- 默认隐藏的列表 -->
+                    <ul class="item-ul-hide clearfix">
+                        <li><a href="#">全部品牌</a></li>
+                        <li><a href="#">全部品牌</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 每个选项 -->
+            <div class="screen-item">
+                <div class="item-title">
+                    <span class="tn">品牌</span>
+                    <span class="tn-all">全部品牌</span>
+                    <i>^</i>
+                </div>
+                <div class="item-body">
+                    <!-- 默认显示的列表 -->
+                    <ul class="item-ul-show clearfix">
+                        <li>
+                            <a href="#" class="bg">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                    <!-- 默认隐藏的列表 -->
+                    <ul class="item-ul-hide clearfix">
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 每个选项 -->
+            <div class="screen-item">
+                <div class="item-title">
+                    <span class="tn">品牌</span>
+                    <span class="tn-all">全部品牌</span>
+                    <i>^</i>
+                </div>
+                <div class="item-body">
+                    <!-- 默认显示的列表 -->
+                    <ul class="item-ul-show clearfix">
+                        <li>
+                            <a href="#" class="bg">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                    <!-- 默认隐藏的列表 -->
+                    <ul class="item-ul-hide clearfix">
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 每个选项 -->
+            <div class="screen-item">
+                <div class="item-title">
+                    <span class="tn">品牌</span>
+                    <span class="tn-all">全部品牌</span>
+                    <i>^</i>
+                </div>
+                <div class="item-body">
+                    <!-- 默认显示的列表 -->
+                    <ul class="item-ul-show clearfix">
+                        <li>
+                            <a href="#" class="bg">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                    <!-- 默认隐藏的列表 -->
+                    <ul class="item-ul-hide clearfix">
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 每个选项 -->
+            <div class="screen-item">
+                <div class="item-title">
+                    <span class="tn">品牌</span>
+                    <span class="tn-all">全部品牌</span>
+                    <i>^</i>
+                </div>
+                <div class="item-body">
+                    <!-- 默认显示的列表 -->
+                    <ul class="item-ul-show clearfix">
+                        <li>
+                            <a href="#" class="bg">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                    <!-- 默认隐藏的列表 -->
+                    <ul class="item-ul-hide clearfix">
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 每个选项 -->
+            <div class="screen-item">
+                <div class="item-title">
+                    <span class="tn">品牌</span>
+                    <span class="tn-all">全部品牌</span>
+                    <i>^</i>
+                </div>
+                <div class="item-body">
+                    <!-- 默认显示的列表 -->
+                    <ul class="item-ul-show clearfix">
+                        <li>
+                            <a href="#" class="bg">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                    <!-- 默认隐藏的列表 -->
+                    <ul class="item-ul-hide clearfix">
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 每个选项 -->
+            <div class="screen-item">
+                <div class="item-title">
+                    <span class="tn">品牌</span>
+                    <span class="tn-all">全部品牌</span>
+                    <i>^</i>
+                </div>
+                <div class="item-body">
+                    <!-- 默认显示的列表 -->
+                    <ul class="item-ul-show clearfix">
+                        <li>
+                            <a href="#" class="bg">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                    <!-- 默认隐藏的列表 -->
+                    <ul class="item-ul-hide clearfix">
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="#">全部品牌</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 产品列表 -->
+    <script type="text/heml" id="Tmp-product-list">
+        {{each result as value i}}
+        <li>
+            <a href="bijia.html?productid={{value.productId}}" class="clearfix">
+                <div class="img">
+                    {{#value.productImg}}
+                </div>
+                <div class="info">
+                    <div class="title">
+                    {{value.productName}}
+                    </div>
+                    <p class="price">{{value.productPrice}}</p>
+                    <p class="other">
+                        <span>{{value.productQuote}}</span>
+                        <span class="comment">{{value.productCom}}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 分页部分 -->
+    <script type="text/html" id="Tmp-page">
+        {{each page as value i}}
+        <option value="{{i+1}}">{{i+1}}/{{page.length}}</option>
+        {{/each}}
+    </script>
+    <!-- 模版引擎 -->
+    <script src="../lib/template/template.js"></script>
+    <!-- 引入自己的Js -->
+    <script src="../js/prolist.js"></script>
+</body>
+</html>

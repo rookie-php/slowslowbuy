@@ -1,0 +1,183 @@
+  /*引入初始化样式*/
+
+  @import 'base.less';
+  
+  /*引入公用头部样式*/
+  
+  @import 'header.less';
+  
+  /*公共详情部分*/
+  
+  @import 'public-detail.less';
+  
+  /*主体部分*/
+  body {
+      background: #ebebeb;
+  }
+  #main {
+      //导航部分
+      .main-nav {
+          position: relative;
+          padding-top: 1rem;
+          // background-color: #ebebeb;
+          >ul {
+              >li {            
+                  float: left;
+                  width: 33.3333%;
+                  height: 2rem;
+                  line-height: 1.9rem;
+                  border-top: 2px solid #c14d00;
+                  border-bottom: 2px solid #c14d00;
+                  border-left: 1px solid #c14d00;
+                  background-color: #ffbb00;
+                  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+                  &:first-of-type {
+                      border-left: none;
+                      background: #ffbb00;
+                      background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000))
+                  }
+                  >a {
+                      display: block;
+                      text-align: center;
+                  }
+              }
+          } //向下的小箭头
+          >.logo {
+              position: relative;
+              background-color: #fff;
+              height: 0.5rem;
+              line-height: 0.5rem;
+              >img {
+                  position: absolute;
+                  top: -0.1rem;
+                  left: 15%;
+              }
+          }
+      } 
+      //商城来源
+      >.main-source {
+          background-color: #fff;
+          padding-top: 0.5rem;        
+          >ul {
+              >li {
+                  position: relative;
+                  padding: 0.7rem 0px;
+                  border-bottom: 1px solid #ccc;
+                  >a {
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      width: 100%;
+                      height: 100%;
+                      line-height: 1.4rem;
+                      >.mall {
+                          float: left;
+                          width: 40%;
+                          padding-left: 0.5rem;
+                          >img {
+                              margin-bottom: 0.05rem;
+                          }
+                          >span {
+                              &:first-of-type {
+                                  color: #5a5a5a;
+                                  font-size: 0.7rem;
+                              }
+                              &:last-of-type {
+                                  color: #999;
+                                  font-size: 0.6rem;
+                              }
+                          }
+                      }
+                      >.price {
+                          float: left;
+                          width: 60%;
+                          text-align: right;
+                          padding-right: 1.25rem;
+                          color: #fe0202;
+                          font-size: 0.7rem;
+                      }
+                  }
+              }
+          }
+      } 
+      //比价结果 历史最低价
+      >.tip {
+          background-color: #fff;
+          >a {
+              display: inline-block;
+              padding: 0.75rem 0.5rem;
+          }
+          >p {
+              padding: 0.5rem;
+              color: #888;
+              font-size: 0.6rem;
+          }
+      } 
+      //优选网友评价
+      >.evaluate {
+          border-top: 4px solid #7a7a7a;
+          margin-top: 0.25rem; //优选网友评价
+          >.ev-title {
+              >p {
+                  height: 1.7rem;
+                  line-height: 1.7rem;
+                  text-align: center;
+                  font-size: 0.7rem;
+                  border-top: 1px solid #fff;
+              }
+          }
+          >ul {
+              background-color: #fff;            
+              >li {
+                  border-top: 1px solid #ccc; //头部 包括 用户 评价星级 时间 来自哪个商城
+                  padding: 0.25rem 0.5rem;
+                  >.head {
+                      >.user-star {
+                          float: left;
+                          width: 50%;
+                      }
+                      >.time-mall {
+                          width: 50%;
+                          float: left;
+                          text-align: right;
+                      }
+                  } //评论内容
+                  >.content {
+                      width: 50%;
+                      color: #000;
+                      font-size: 0.7rem;
+                      line-height: 1.1rem;
+                      padding-top: 5px
+                  } //回复
+                  >a {
+                      font-size: 0.6rem;
+                      color: #999;
+                  }
+              }
+          }
+      } 
+      //查看更多网友评价
+      >.more {
+          padding: 0 0.4rem;
+          margin-top: 0.8rem;
+          >a {
+              display: block;
+              height: 1.6rem;
+              background-color: #d4d4d4;
+              text-align: center;
+              font-size: 0.7rem;
+              line-height: 1.6rem;
+              border-radius: 5px;
+              border-bottom: 1px solid #bababa;
+              box-shadow: 0 0 0.05rem #666;
+          }
+      }
+  }
+  
+/*引入公用广告*/
+@import 'public-ad.less';
+  
+  
+  /*引入公用底部样式*/
+  
+@import 'footer.less';

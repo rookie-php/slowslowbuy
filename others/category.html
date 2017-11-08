@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet/less" href="../less/category.less">
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <!-- 公用头部 -->
+    <header id="topbar">
+        <!-- logo部分 -->
+        <div class="topbar-img clearfix">
+            <!-- 左边的Logo -->
+            <a href="../index.html" class="l-logo">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+            <!-- 右边的下载图标 -->
+            <a href="#" class="r-appDown">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+        <!-- 搜索部分 -->
+        <div class="topbar-search">
+            <!-- 表单 -->
+            <form action="" class="topbar-form">
+                <!-- 搜索框 -->
+                <input type="text" class="search-txt" placeholder="请输入你想比价的商品">
+                <!-- 搜索按钮 -->
+                <input type="submit" value="搜索" class="search-btn">
+            </form>
+        </div>
+    </header>
+
+    <!-- 主体导航菜单 -->
+    <main id="main">
+       <div class="item-wrap">
+            <!-- 每个一级导航导航 -->
+            <div class="item">
+                <!-- 每个一级导航的标题 -->
+                <a href="#" class="item-title">大 家 电</a>
+                <!-- 二级导航 -->
+                <div class="item-body">
+                    <ul class="clearfix">
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                        <li><a href="#">平板电视</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+       </div>
+    </main>
+
+    <!-- 公用底部 -->
+    <footer id="footer">
+        <!-- 登录 注册 返回顶部按钮 -->
+        <div class="footer-top clearfix">
+            <!-- 登录按钮 -->
+            <a href="#" class="login">登录</a>
+            <!-- 注册按钮 -->
+            <a href="#" class="register">注册</a>
+            <!-- 返回顶部 -->
+            <a href="#" class="backTop">
+                <img src="../images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <!-- 网页基本信息 -->
+        <div class="footer-info">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 导航模块 -->
+    <script type="text/html" id="Tmp-item-wrap">
+        {{each result as value i}}
+            <div class="item">
+                <!-- 每个一级导航的标题 -->
+                <a href="javescript:;"  class="item-title" titleId="{{value.titleId}}">
+                    {{value.title}}
+                    <img src="../images/arrow1.gif" alt="">
+                </a>
+                  <!-- 二级导航 -->
+                <div class="item-body ishide">
+                    <ul class="clearfix">
+                    
+                    </ul> 
+                </div>
+            </div>
+        {{/each}}
+    </script>
+
+    <!-- 二级导航模块 -->
+    <script type="text/html" id="Tmp-item-list">
+        {{each result as value i}}
+            <li>
+                <a href="prolist.html?categoryid={{value.categoryId}}">{{value.category}}</a>
+            </li>
+        {{/each}}            
+    </script>
+    <!-- 引入less编译器 -->
+    <script src="../lib/less/less.js"></script>
+    <!-- 引入模版引擎 -->
+    <script src="../lib/template/template.js"></script>
+    <!-- 引入自己的js -->
+    <script src="../js/category.js"></script>
+</body>
+</html>
